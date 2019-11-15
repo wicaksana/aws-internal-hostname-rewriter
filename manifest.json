@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "aws internal hostname rewriter",
+  "version": "1.0",
+  "description": "AWS private hostname rewriter",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.ec2.internal:*/*",
+    "*://*.ec2.internal/*",
+    "*://*.compute.internal:*/*",
+    "*://*.compute.internal/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/get_started16.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  }
+}
